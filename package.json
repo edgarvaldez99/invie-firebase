@@ -1,0 +1,28 @@
+{
+  "name": "invie-firebase",
+  "version": "1.0.0",
+  "description": "A simple app for try firebase",
+  "main": "./js/index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/edgarvaldez99/invie-firebase.git"
+  },
+  "keywords": [
+    "invie",
+    "guitarra",
+    "platzi",
+    "firebase"
+  ],
+  "author": "evaldez",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/edgarvaldez99/invie-firebase/issues"
+  },
+  "homepage": "https://github.com/edgarvaldez99/invie-firebase#readme",
+  "dependencies": {
+    "firebase-tools": "^4.0.1"
+  }
+}
