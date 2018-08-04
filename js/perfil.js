@@ -24,3 +24,31 @@ btnSet.addEventListener("click", event => {
         nombre: "test anterior pisado al usar set"
     })
 })
+
+firebase.auth().onAuthStateChanged(user => {
+    if (user) {
+        mostrarLogout()
+        usuario = {
+            nombre: user.displayName,
+            email: user.email,
+            uid: user.uid
+        }
+        agregarUsuario(usuario)
+    } else {
+        mostrarLogin()
+        window.location.href = "index.html"
+    }
+})
+
+leerDatosUsuario()
+
+function leerDatosUsuario() {
+    refUserDB.child("-LJ1gskrv3hQG3zCZSXY").once("value", data => llenarDatosUsuario(data.val()))
+}
+
+function llenarDatosUsuario(data) {
+    document.getElementById("perfilNombre").innerHTML = data.nombre
+    document.getElementById("perfilEmail").innerHTML = data.email
+    document.getElementById("perfilTelefono").innerHTML = data.telefono || ""
+    document.getElementById("perfilDireccion").innerHTML = data.direccion || ""
+}
