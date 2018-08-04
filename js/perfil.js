@@ -34,16 +34,15 @@ firebase.auth().onAuthStateChanged(user => {
             uid: user.uid
         }
         agregarUsuario(usuario)
+        leerDatosUsuario(user.uid)
     } else {
         mostrarLogin()
         window.location.href = "index.html"
     }
 })
 
-leerDatosUsuario()
-
-function leerDatosUsuario() {
-    refUserDB.child("-LJ1gskrv3hQG3zCZSXY").once("value", data => llenarDatosUsuario(data.val()))
+function leerDatosUsuario(uid) {
+    refUserDB.child(uid).once("value", data => llenarDatosUsuario(data.val()))
 }
 
 function llenarDatosUsuario(data) {
