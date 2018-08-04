@@ -47,47 +47,47 @@
         <h3 id="perfilTelefono"></h3>
         <label for="perfilDireccion">Direccion</label>
         <h3 id="perfilDireccion"></h3>
-        <button id="perfilEditar">Editar</button>
+        <button id="perfilEditar" class="button">Editar</button>
       </div>
     </section>
-    <section class="formularioPerfil" onsubmit="editarDatos()" id="formularioPerfil" style="display:none">
+    <section class="formularioPerfil" id="formularioPerfil" style="display:none">
 
       <div class="contenedor">
         <h2>Edita tu información</h2>
         <form action="" name="formPerfil">
           <div>
             <label for="nombreForm">Nombre:</label>
-            <input type="text" id="nombreForm" required>
+            <input type="text" id="nombreForm" name="nombre" required>
           </div>
           <div>
             <label for="emailForm">Email:</label>
-            <input type="text" id="emailForm" required>
+            <input type="text" id="emailForm" name="email" required>
           </div>
           <div>
             <label for="telefonoForm">Teléfono:</label>
-            <input type="text" id="telefonoForm" required>
+            <input type="text" id="telefonoForm" name="telefono" required>
           </div>
           <div>
             dirección
           </div>
           <div>
             <label for="calleForm">calle:</label>
-            <input type="text" id="calleForm" required>
+            <input type="text" id="calleForm" name="direccion.calle" required>
           </div>
           <div>
             <label for="interiorForm">Num. Int.:</label>
-            <input type="text" id="interiorForm" required>
+            <input type="text" id="interiorForm" name="direccion.interior" required>
           </div>
           <div>
             <label for="coloniaForm">colonia:</label>
-            <input type="text" id="coloniaForm" required>
+            <input type="text" id="coloniaForm" name="direccion.colonia" required>
           </div>
           <div>
             <label for="cpForm">Código postal:</label>
-            <input type="text" id="cpForm" required>
+            <input type="text" id="cpForm" name="direccion.cp" required>
           </div>
-          <button type="button" id="cancelForm">cancelar</button>
-          <button type="submit">Guardar</button>
+          <button type="button" class="button" id="cancelForm">cancelar</button>
+          <button type="submit" class="button">Guardar</button>
         </form>
       </div>
     </section>
